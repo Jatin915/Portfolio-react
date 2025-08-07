@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Outlet } from 'react-router';
 import Navbar from '../Components/Navbar'
 import { MenuToggle } from '../Components/MenuToggle';
+// import { Footer } from '../Components/Footer.jsx';
 
 
 const Layout = () => {
@@ -10,8 +11,8 @@ const Layout = () => {
     <>
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
       <MenuToggle menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-      {/* <Outlet />
-      <footer /> */}
+      <Outlet />
+      {/* <Footer /> */}
     </>
   )
 }

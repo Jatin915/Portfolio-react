@@ -1,4 +1,5 @@
 import React from 'react'
+import '../CustomCss/Showcase.css';
 
 export const Showcase = () => {
   return (

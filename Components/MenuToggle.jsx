@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'; // Ensure you have react-router-dom installed
 import '../CustomCss/MenuToggle.css'; // Adjust the path as necessary
 
-export const MenuToggle = ({menuOpen, setMenuOpen}) => {
+const MenuToggle = ({menuOpen, setMenuOpen}) => {
 
   return (
   <>
@@ -26,3 +26,5 @@ export const MenuToggle = ({menuOpen, setMenuOpen}) => {
     </>
   )
 }
+
+export default MenuToggle;

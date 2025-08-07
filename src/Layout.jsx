@@ -1,20 +1,20 @@
 import React, { useState } from 'react'
 import { Outlet } from 'react-router';
-import Navbar from '../Components/Navbar'
-import { MenuToggle } from '../Components/MenuToggle';
-// import { Footer } from '../Components/Footer.jsx';
+import  Navbar from '../Components/Navbar'
+import  MenuToggle from '../Components/MenuToggle';
+import Footer from '../Components/Footer';
 
 
-const Layout = () => {
+
+export const Layout = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <>
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
       <MenuToggle menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
       <Outlet />
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }
 
-export default Layout

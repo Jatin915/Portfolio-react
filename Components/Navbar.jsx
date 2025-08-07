@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-scroll'; // for smooth scrolling to sections
-import { NavLink } from 'react-router-dom';
+// import { Link } from 'react-scroll'; // for smooth scrolling to sections
+import { NavLink, Link} from 'react-router-dom';
 import { FaMoon, FaSun } from 'react-icons/fa'; // Ensure you have react-icons installed
 // import { document } from 'postcss';
 
@@ -15,13 +15,13 @@ const Navbar = ({menuOpen, setMenuOpen}) => {
   return (
     <>
     <nav className='fixed top-0 w-full pt-6 pb-5 z-50 shadow-md bg-white dark:shadow-gray-900 sm:dark:shadow-md flex justify-between items-center px-10 dark:bg-gray-950 transition duration-300'>
-      <Link to="/" smooth={"true"} duration={500}>
+      <Link to="/">
         <h2 className='text-3xl dark:text-white transition duration-300 font-bold cursor-pointer'>Jatin.dev</h2>
       </Link>
 
       <ul className='sm:flex sm:text-sm sm:gap-6 md:gap-8 hidden md:text-lg'>
         <li>
-          <NavLink to="/showcase" className={({isActive}) => `${(isActive) ? "text-orange-700 dark:text-orange-700" : "text-black dark:text-white"}  transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer font-semibold dark:text-gray-50`}>ShowCase</NavLink>
+          <NavLink to="/showcase" className={({isActive}) => `${(isActive) ? "text-orange-700 dark:text-orange-700" : "text-black dark:text-white"}  transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer font-semibold dark:text-gray-50`}>Showcase</NavLink>
         </li>
         <li>
           <NavLink to={"/about"} className={({isActive}) => `${isActive ? "text-orange-700" : "text-black"} transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer font-semibold dark:text-gray-50`}>About</NavLink>

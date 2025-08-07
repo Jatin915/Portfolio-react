@@ -5,7 +5,7 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import  { Layout }  from './Layout';
 import { Hero } from '../Components/Hero';
 import { Showcase } from '../Components/Showcase';
-// import About from './Components/About';
+import { About } from '../Components/About';
 // import Contact from './Components/Contact';
 // import Github from './Components/Github';
 
@@ -15,8 +15,8 @@ const router = createBrowserRouter(
     <Route path='/' element={<Layout />}>
       <Route index element={<Hero />} />
       <Route path='showcase' element={<Showcase />} />
-      {/* <Route path='about' element={<About />} />
-      <Route path='contact' element={<Contact />} />
+      <Route path='about' element={<About />} />
+      {/* <Route path='contact' element={<Contact />} />
       <Route path='github' element={<Github />} /> */}
     </Route>
   )

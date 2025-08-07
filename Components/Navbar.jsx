@@ -24,16 +24,16 @@ const Navbar = ({menuOpen, setMenuOpen}) => {
           <NavLink to="/showcase" className={({isActive}) => `${(isActive) ? "text-orange-700 dark:text-orange-700" : "text-black dark:text-white"}  transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer font-semibold dark:text-gray-50`}>Showcase</NavLink>
         </li>
         <li>
-          <NavLink to={"/about"} className={({isActive}) => `${isActive ? "text-orange-700" : "text-black"} transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer font-semibold dark:text-gray-50`}>About</NavLink>
+          <NavLink to={"/about"} className={({isActive}) => `${(isActive) ? "text-orange-700 dark:text-orange-700" : "text-black"} transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer font-semibold dark:text-gray-50`}>About</NavLink>
         </li>
         <li>
-          <NavLink to={"/skills"} className={({isActive}) => `${isActive ? "text-orange-700" : "text-black"} transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer font-semibold dark:text-gray-50`}>Skills</NavLink>
+          <NavLink to={"/skills"} className={({isActive}) => `${isActive ? "text-orange-700 dark:text-orange-700" : "text-black"} transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer font-semibold dark:text-gray-50`}>Skills</NavLink>
         </li>
         <li>
-          <NavLink to={"/projects"} className={({isActive}) => `${isActive ? "text-orange-700" : "text-black"} transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer font-semibold dark:text-gray-50`}>Projects</NavLink>
+          <NavLink to={"/projects"} className={({isActive}) => `${isActive ? "text-orange-700 dark:text-orange-700" : "text-black"} transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer font-semibold dark:text-gray-50`}>Projects</NavLink>
         </li>
         <li>
-          <NavLink to={"/contact"} className={({isActive}) => `${isActive ? "text-orange-700" : "text-black"} transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer font-semibold dark:text-gray-50`}>Contacts</NavLink>
+          <NavLink to={"/contact"} className={({isActive}) => `${isActive ? "text-orange-700 dark:text-orange-700" : "text-black"} transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer font-semibold dark:text-gray-50`}>Contacts</NavLink>
         </li>
       </ul>
 

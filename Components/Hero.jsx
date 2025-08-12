@@ -1,5 +1,6 @@
 
-import React, { useEffect, useState } from 'react'
+import { handle } from 'express/lib/application';
+import React, { useCallback, useEffect, useState } from 'react'
 
 export const Hero = () => {
 
@@ -13,40 +14,37 @@ export const Hero = () => {
   const [charIndex, setCharIndex] = useState(0);
   const [Index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-
-  // Typing effect for terminal text
-  useEffect(() => {
+  
+  const handleTyping = useCallback(() => {
     const typingSpeed = isDeleting ? 50 : 100; // Speed of typing and deleting
-    // const typingText = document.getElementById('typing-text');
-
-    const handleTyping = () => {
-      if(!isDeleting) {
-        if (!displayText) return; // Ensure the element exists
+    if(!isDeleting) {
       // const terminalCursor = document.getElementById('terminal-blinking-cursor');
-        
+      
       if(charIndex < texts[Index].length) {
-          setDisplayText(texts[Index].substring(0, charIndex + 1));
-          setCharIndex(prev => prev + 1);
+        setDisplayText(texts[Index].substring(0, charIndex + 1));
+        setCharIndex(prev => prev + 1);
       }
       else{
-        setTimeout(setIsDeleting(true), 1000); // Wait before starting to delete
+        setTimeout(() => {
+          setIsDeleting(true);
+        }, 1000); // Wait before starting to delete
       }
     }
-      else {
-        if(charIndex > 0) {
-          setDisplayText(texts[Index].slice(0, charIndex - 1));
-          setCharIndex(prev => prev - 1);
-        } else {
-          setIsDeleting(false);
-          setIndex(Index + 1);
-          if(Index > 2) setIndex(0);
-          setDisplayText("");
-        }
+    else {
+      if(charIndex > 0) {
+        setDisplayText(texts[Index].slice(0, charIndex - 1));
+        setCharIndex(prev => prev - 1);
+      } else {
+        setIsDeleting(false);
+        setIndex(prev => prev + 1);
+        if(Index == 2) setIndex(0);
+        setDisplayText("");
       }
-    };
-
+    }
+  }, [handleTyping, charIndex, isDeleting, Index]);
+  
+  useEffect(() => {
     setTimeout(handleTyping, typingSpeed);
-
   }, [charIndex, isDeleting, Index, displayText]);
 
   return (

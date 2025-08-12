@@ -1,6 +1,54 @@
-import React from 'react'
+
+import React, { useEffect, useState } from 'react'
 
 export const Hero = () => {
+
+  const texts = [
+    "git clone https://github.com/Jatin915/",
+    "https://in.linkedin.com/",
+    "https://instagram.com/"
+  ];
+
+  const [displayText, setDisplayText] = useState("");
+  const [charIndex, setCharIndex] = useState(0);
+  const [Index, setIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  // Typing effect for terminal text
+  useEffect(() => {
+    const typingSpeed = isDeleting ? 50 : 100; // Speed of typing and deleting
+    // const typingText = document.getElementById('typing-text');
+
+    const handleTyping = () => {
+      if(!isDeleting) {
+        if (!displayText) return; // Ensure the element exists
+      // const terminalCursor = document.getElementById('terminal-blinking-cursor');
+        
+      if(charIndex < texts[Index].length) {
+          setDisplayText(texts[Index].substring(0, charIndex + 1));
+          setCharIndex(prev => prev + 1);
+      }
+      else{
+        setTimeout(setIsDeleting(true), 1000); // Wait before starting to delete
+      }
+    }
+      else {
+        if(charIndex > 0) {
+          setDisplayText(texts[Index].slice(0, charIndex - 1));
+          setCharIndex(prev => prev - 1);
+        } else {
+          setIsDeleting(false);
+          setIndex(Index + 1);
+          if(Index > 2) setIndex(0);
+          setDisplayText("");
+        }
+      }
+    };
+
+    setTimeout(handleTyping, typingSpeed);
+
+  }, [charIndex, isDeleting, Index, displayText]);
+
   return (
     <section id="hero" className="min-h-[calc(100vh-80px)] md:px-24 w-auto backdrop-blur-3xl shadow-sm mt-4 bg-slate-100 dark:bg-gray-950 transition duration-300">
       <div className="sm:py-28 sm:px-8 md:px-1 lg:px-38 py-20 text-center  min-h-full w-full">
@@ -23,7 +71,7 @@ export const Hero = () => {
 
           <div className="font-mon px-1 sm:px-3 lg:text-2xl text-lg pb-6 pt-6 tracking-wide">
             <span className="text-green-600 font-mono font-semibold transition-all ease-in-out">$</span>
-            <span id="typing-text"></span>
+            <span id='typing-text'>{displayText}</span>
             <span id="terminal-blinking-cursor">|</span>
           </div>
         </div>

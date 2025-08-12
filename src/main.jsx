@@ -6,7 +6,9 @@ import  { Layout }  from './Layout';
 import { Hero } from '../Components/Hero';
 import { Showcase } from '../Components/Showcase';
 import { About } from '../Components/About';
-// import Contact from './Components/Contact';
+import { Skills } from '../Components/Skills';
+import { Projects } from '../Components/Projects';
+import { Contact } from '../Components/Contact';
 // import Github from './Components/Github';
 
 
@@ -16,6 +18,10 @@ const router = createBrowserRouter(
       <Route index element={<Hero />} />
       <Route path='showcase' element={<Showcase />} />
       <Route path='about' element={<About />} />
+      <Route path='skills' element={<Skills />} />
+      <Route path='projects' element={<Projects />} />
+      <Route path='Contact' element={<Contact />} />
+
       {/* <Route path='contact' element={<Contact />} />
       <Route path='github' element={<Github />} /> */}
     </Route>

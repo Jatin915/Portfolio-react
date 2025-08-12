@@ -33,7 +33,7 @@ const Navbar = ({menuOpen, setMenuOpen}) => {
           <NavLink to={"/projects"} className={({isActive}) => `${isActive ? "text-orange-700 dark:text-orange-700" : "text-black"} transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer font-semibold dark:text-gray-50`}>Projects</NavLink>
         </li>
         <li>
-          <NavLink to={"/contact"} className={({isActive}) => `${isActive ? "text-orange-700 dark:text-orange-700" : "text-black"} transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer font-semibold dark:text-gray-50`}>Contacts</NavLink>
+          <NavLink to={"/contact"} className={({isActive}) => `${isActive ? "text-orange-700 dark:text-orange-700" : "text-black"} transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer font-semibold dark:text-gray-50`}>Contact</NavLink>
         </li>
       </ul>
 

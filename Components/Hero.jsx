@@ -1,6 +1,5 @@
-
-import { handle } from 'express/lib/application';
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react';
+import '../CustomCss/BlinkingCursor.css'; // Importing the CSS for the blinking cursor
 
 export const Hero = () => {
 
@@ -15,11 +14,9 @@ export const Hero = () => {
   const [Index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   
+  const typingSpeed = isDeleting ? 50 : 100; // Speed of typing and deleting
   const handleTyping = useCallback(() => {
-    const typingSpeed = isDeleting ? 50 : 100; // Speed of typing and deleting
     if(!isDeleting) {
-      // const terminalCursor = document.getElementById('terminal-blinking-cursor');
-      
       if(charIndex < texts[Index].length) {
         setDisplayText(texts[Index].substring(0, charIndex + 1));
         setCharIndex(prev => prev + 1);
@@ -27,7 +24,7 @@ export const Hero = () => {
       else{
         setTimeout(() => {
           setIsDeleting(true);
-        }, 1000); // Wait before starting to delete
+        }, 2000); // Wait before starting to delete
       }
     }
     else {
@@ -41,7 +38,7 @@ export const Hero = () => {
         setDisplayText("");
       }
     }
-  }, [handleTyping, charIndex, isDeleting, Index]);
+  }, [charIndex, isDeleting, Index]);
   
   useEffect(() => {
     setTimeout(handleTyping, typingSpeed);

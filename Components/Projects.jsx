@@ -22,8 +22,8 @@ export const Projects = () => {
           <span className="text-gray-500 text-sm bg-gray-200 dark:bg-gray-700 dark:text-gray-400 p-1 px-2 rounded-xl transition duration-300">HTML5</span>
           <span className="text-gray-500 text-sm bg-gray-200 dark:bg-gray-700 dark:text-gray-400 p-1 px-2 rounded-xl transition duration-300">CSS3</span>
           <span className="text-gray-500 text-sm bg-gray-200 dark:bg-gray-700 dark:text-gray-400 p-1 px-2 rounded-xl transition duration-300">JavaScript</span>
-          <button id="btn" className="h-10 w-22 bg-red-500 px-4 rounded-md text-white mt-6 transition-transform duration-300 ease-in-out">Youtube</button>
-          <button id="btn" className="h-12 w-20 rounded-md text-gray-600 dark:text-gray-300 mb-8 dark:bg-transparent transition-all duration-300 ease-in-out"><i className="fa-brands fa-github mr-2"></i>Code</button>
+          <button id="btn" className="h-10 w-22 bg-red-500 px-4 rounded-md text-white mt-6 transition-transform duration-300 ease-in-out cursor-pointer">Youtube</button>
+          <button id="btn" className="h-12 w-20 rounded-md text-gray-600 dark:text-gray-300 mb-8 dark:bg-transparent transition-all duration-300 ease-in-out cursor-pointer"><i className="fa-brands fa-github mr-2"></i>Code</button>
         </div>
         </div>
         {/* <!-- First Skill card ends here --> */}
@@ -39,8 +39,8 @@ export const Projects = () => {
           <span className="text-gray-500 text-sm bg-gray-200 dark:bg-gray-700 dark:text-gray-400 p-1 px-2 rounded-xl transition duration-300">HTML5</span>
           <span className="text-gray-500 text-sm bg-gray-200 dark:bg-gray-700 dark:text-gray-400 p-1 px-2 rounded-xl transition duration-300">CSS3</span>
           <span className="text-gray-500 text-sm bg-gray-200 dark:bg-gray-700 dark:text-gray-400 p-1 px-2 rounded-xl transition duration-300">JavaScript</span>
-          <button id="btn" className="h-10 w-22 bg-red-500 px-4 rounded-md text-white mt-6 transition-transform duration-300 ease-in-out">Youtube</button>
-          <button id="btn" className="h-12 w-20 rounded-md text-gray-600 dark:text-gray-300 mb-8 dark:bg-transparent transition-all duration-300 ease-in-out"><i className="fa-brands fa-github mr-2"></i>Code</button>
+          <button id="btn" className="h-10 w-22 bg-red-500 px-4 rounded-md text-white mt-6 transition-transform duration-300 ease-in-out cursor-pointer">Youtube</button>
+          <button id="btn" className="h-12 w-20 rounded-md text-gray-600 dark:text-gray-300 mb-8 dark:bg-transparent transition-all duration-300 ease-in-out cursor-pointer"><i className="fa-brands fa-github mr-2"></i>Code</button>
         </div>
         </div>
         {/* <!-- Second Skill card ends here --> */}
@@ -56,8 +56,8 @@ export const Projects = () => {
           <span className="text-gray-500 text-sm bg-gray-200 dark:bg-gray-700 dark:text-gray-400 p-1 px-2 rounded-xl transition duration-300">HTML5</span>
           <span className="text-gray-500 text-sm bg-gray-200 dark:bg-gray-700 dark:text-gray-400 p-1 px-2 rounded-xl transition duration-300">CSS3</span>
           <span className="text-gray-500 text-sm bg-gray-200 dark:bg-gray-700 dark:text-gray-400 p-1 px-2 rounded-xl transition duration-300">JavaScript</span>
-          <button id="btn" className="h-10 w-22 bg-red-500 px-4 rounded-md text-white mt-6 transition-transform duration-300 ease-in-out">Youtube</button>
-          <button id="btn" className="h-12 w-20 rounded-md text-gray-600 dark:text-gray-300 mb-8 dark:bg-transparent transition-all duration-300 ease-in-out"><i className="fa-brands fa-github mr-2"></i>Code</button>
+          <button id="btn" className="h-10 w-22 bg-red-500 px-4 rounded-md text-white mt-6 transition-transform duration-300 ease-in-out cursor-pointer">Youtube</button>
+          <button id="btn" className="h-12 w-20 rounded-md text-gray-600 dark:text-gray-300 mb-8 dark:bg-transparent transition-all duration-300 ease-in-out cursor-pointer"><i className="fa-brands fa-github mr-2"></i>Code</button>
         </div>
         </div>
         {/* <!-- Third Skill card ends here --> */}

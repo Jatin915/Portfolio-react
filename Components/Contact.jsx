@@ -34,15 +34,17 @@ export const Contact = () => {
           <form action>
             <h1 className="text-xl font-semibold mb-5 dark:text-gray-200 transition duration-300">Send me a Message</h1>
             <h5 className="text-gray-500 dark:text-gray-400 mb-1 transition duration-300">Name</h5>
-            <input className="w-full min-h-10 bg-transparent border-[0.5px] border-gray-300 rounded-md" type="text" />
+            <input className="w-full min-h-10 pl-2 bg-transparent border-[0.5px] border-gray-300 rounded-md dark:text-white" type="text" />
 
             <h5 className="text-gray-500 dark:text-gray-400 mb-1 mt-6 transition duration-300">Email</h5>
-            <input className="w-full min-h-10 bg-transparent border-[0.5px] border-gray-300 rounded-md" type="text" />
+            <input className="w-full min-h-10 pl-2 bg-transparent border-[0.5px] border-gray-300 rounded-md dark:text-white" type="text" />
 
             <h5 className="text-gray-500 dark:text-gray-400 mb-1 mt-6 transition duration-300">Message</h5>
-            <input className="w-full min-h-32 bg-transparent border-[0.5px] border-gray-300 rounded-md" type="text" />
+            <textarea 
+  className="w-full min-h-32 pl-2 pt-2 bg-transparent border-[0.5px] border-gray-300 rounded-md dark:text-white overflow-auto resize-none" 
+/>
 
-            <button className="h-12 min-w-full mt-10 bg-blue-500 px-6 rounded-md text-white transition-colors duration-300 ease-in-out hover:bg-blue-600">Submit</button>
+            <button className="h-12 min-w-full mt-10 bg-blue-500 px-6 rounded-md text-white transition-colors duration-300 ease-in-out hover:bg-blue-600 cursor-pointer">Submit</button>
           </form>
             
         </div>

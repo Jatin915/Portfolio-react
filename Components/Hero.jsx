@@ -13,15 +13,20 @@ export const Hero = () => {
   const [charIndex, setCharIndex] = useState(0);
   const [Index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [isCursorVisible, setIsCursorVisible] = useState(false);
   
   const typingSpeed = isDeleting ? 50 : 100; // Speed of typing and deleting
   const handleTyping = useCallback(() => {
     if(!isDeleting) {
+      setIsCursorVisible(false);
       if(charIndex < texts[Index].length) {
         setDisplayText(texts[Index].substring(0, charIndex + 1));
         setCharIndex(prev => prev + 1);
+        // document.getElementById('terminal-blinking-cursor').removeAttribute('id'); // Show cursor
       }
       else{
+        // document.getElementById('terminal-blinking-cursor').setAttribute('id'); // Blink cursor
+        setIsCursorVisible(true);
         setTimeout(() => {
           setIsDeleting(true);
         }, 2000); // Wait before starting to delete
@@ -29,6 +34,7 @@ export const Hero = () => {
     }
     else {
       if(charIndex > 0) {
+        setIsCursorVisible(false);
         setDisplayText(texts[Index].slice(0, charIndex - 1));
         setCharIndex(prev => prev - 1);
       } else {
@@ -67,7 +73,7 @@ export const Hero = () => {
           <div className="font-mon px-1 sm:px-3 lg:text-2xl text-lg pb-6 pt-6 tracking-wide">
             <span className="text-green-600 font-mono font-semibold transition-all ease-in-out">$</span>
             <span id='typing-text'>{displayText}</span>
-            <span id="terminal-blinking-cursor">|</span>
+            <span id={isCursorVisible ? 'terminal-blinking-cursor' : undefined} className='ml-2'>|</span>
           </div>
         </div>
 

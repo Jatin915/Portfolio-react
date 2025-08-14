@@ -54,7 +54,7 @@ export const Hero = () => {
 
   return (
     <section id="hero" className="min-h-[calc(100vh)] pt-8 md:px-24 w-auto backdrop-blur-3xl shadow-sm mt-4 bg-slate-100 dark:bg-gray-950 transition duration-300">
-      <div className="sm:py-28 sm:px-8 md:px-1 lg:px-38 py-20 text-center  min-h-full w-full">
+      <div className="sm:py-28 sm:px-8 md:px-1 lg:px-16 py-20 text-center min-h-full w-full">
 
        <span><h1 className="text-3xl px-4 sm:text-6xl font-bold leading-snug dark:text-white transition duration-300">The <span className="bg-gradient-to-r from-blue-100 via-purple-300 to-teal-200 leading-snug dark:text-gray-800 transition duration-300">FullStack Developer</span> For The Web</h1></span>
 

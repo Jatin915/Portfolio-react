@@ -9,7 +9,7 @@ const MenuToggle = ({menuOpen, setMenuOpen}) => {
 
     <div id="menu-container" className={`min-h-full w-full fixed top-0 z-50 p-5 flex flex-col transition-all duration-300 ${(menuOpen) ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`}>
       <div className="flex justify-between items-center">
-        <Link onClick={() => setMenuOpen(false)} to="/hero"><strong><h2 className="text-2xl dark:text-white transition duration-300">Jatin.dev</h2></strong></Link>
+        <Link onClick={() => setMenuOpen(false)} to="/"><strong><h2 className="text-2xl dark:text-white transition duration-300">Jatin.dev</h2></strong></Link>
         <button onClick={() => setMenuOpen(false)} className="text-black dark:text-white transition duration-300 h-fit "><h1 className="text-2xl">X</h1></button>
       </div>
 

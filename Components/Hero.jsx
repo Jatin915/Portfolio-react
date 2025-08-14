@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../CustomCss/BlinkingCursor.css'; // Importing the CSS for the blinking cursor
 import '../CustomCss/Hero.css'; // Importing custom CSS for the Hero component
 
@@ -60,8 +61,8 @@ export const Hero = () => {
         <p className="mt-16 text-md sm:text-2xl px-4 text-gray-600 dark:text-gray-400 transition duration-300">Creating <strong className="dark:text-gray-300 transition duration-300">high-quality web applications</strong> with modern tools and best practices for exceptional user experiences.</p>
 
         <div className="sm:min-h-28 sm:min-w-full pt-20 sm:pt-10 px-4">
-          <a href="#projects"><button id="btn" className="h-12 min-w-full sm:min-w-fit bg-blue-500 px-6 rounded-md text-white mr-4 mb-4 transition-transform duration-300 ease-in-out cursor-pointer">View Projects</button></a>
-          <a href="#about"><button id="btn" className="h-12 min-w-full sm:min-w-fit border-slate-400 border-[0.5px] px-6 rounded-md text-gray-600 dark:text-gray-300 dark:bg-transparent transition-all duration-300 ease-in-out cursor-pointer">Learn More</button></a>
+          <Link to="/projects"><button id="btn" className="h-12 min-w-full sm:min-w-fit bg-blue-500 px-6 rounded-md text-white mr-4 mb-4 transition-transform duration-300 ease-in-out cursor-pointer">View Projects</button></Link>
+          <Link to="/about"><button id="btn" className="h-12 min-w-full sm:min-w-fit border-slate-400 border-[0.5px] px-6 rounded-md text-gray-600 dark:text-gray-300 dark:bg-transparent transition-all duration-300 ease-in-out cursor-pointer">Learn More</button></Link>
         </div>
 
         <div className="min-h-fit mx-4 mt-16 text-wrap sm:w-full rounded-md bg-slate-200 text-gray-950 drop-shadow-lg dark:shadow-lg dark:shadow-zinc-800 dark:bg-zinc-900 dark:text-gray-50 transition duration-300">

@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom'; // for smooth scrolling to sections
+import { Link } from 'react-router-dom';
+import '../CustomCss/Footer.css'; // Importing custom CSS for the footer
 
 const Footer = () => {
   return (

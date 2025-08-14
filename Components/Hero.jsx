@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import '../CustomCss/BlinkingCursor.css'; // Importing the CSS for the blinking cursor
+import '../CustomCss/Hero.css'; // Importing custom CSS for the Hero component
 
 export const Hero = () => {
 

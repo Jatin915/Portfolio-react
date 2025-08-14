@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import '../CustomCss/Contact.css'; // Importing custom CSS for the contact section
 
 export const Contact = () => {
   return (

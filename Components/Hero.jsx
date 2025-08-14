@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; // Importing Link from react-router-dom for navigation
 import '../CustomCss/BlinkingCursor.css'; // Importing the CSS for the blinking cursor
 import '../CustomCss/Hero.css'; // Importing custom CSS for the Hero component
 

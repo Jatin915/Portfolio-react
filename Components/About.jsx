@@ -3,7 +3,7 @@ import Photo from '../src/assets/Jatin.png';
 
 export const About = () => {
   return (
-    <section id="about" className="min-h-[calc(100vh)] min-w-full backdrop-blur-3xl shadow-sm bg-slate-100 sm:flex sm:flex-row sm:justify-center sm:px-20 pt-20 pb-5 flex flex-col items-center dark:bg-gray-950 transition duration-300">
+    <section id="about" className="min-h-[calc(100vh)] mt-6 min-w-full backdrop-blur-3xl shadow-sm bg-slate-100 sm:flex sm:flex-row sm:justify-center sm:px-20 pt-20 pb-5 flex flex-col items-center dark:bg-gray-950 transition duration-300">
       <div id="about-left-container" className="max-h-fit w-[80vw] sm:w-[60vw] xl:max-w-[50vw] lg:mr-32 sm:mr-16">
         <h1 className="text-4xl font-bold mb-10 dark:text-white transition duration-300">About Me</h1>
         <p id="about-text" className="mb-10 text-lg text-gray-500 dark:text-gray-400 transition duration-300">I'm a frontend developer focused on crafting clean & user-friendly experiences.</p>

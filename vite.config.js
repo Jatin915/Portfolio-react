@@ -4,6 +4,5 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/Portfolio-react/', // <-- this is required
-  plugins: [react()],
+  plugins: [react(), tailwindcss()],
 })

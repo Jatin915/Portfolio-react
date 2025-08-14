@@ -1,16 +1,13 @@
 {
   "name": "portfolio-react",
   "private": true,
-  "homepage": "https://jatin915.github.io/Portfolio-react",
+
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
